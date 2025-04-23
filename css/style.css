@@ -1,0 +1,154 @@
+html {
+  font-size: 1.3889vw;
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+@media (min-width: 1441px) {
+  html {
+    font-size: 1.04vw;
+  }
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 1.9531vw;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 3.4722vw;
+  }
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Montserrat, Serif;
+  scrollbar-gutter: stable;
+}
+
+body.popup-open {
+  position: fixed;
+}
+
+body.popup-open header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h1,
+.h1 {
+  position: relative;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+h2,
+.h2 {
+  position: relative;
+  font-family: "Murs Gothic";
+  letter-spacing: 0.01em;
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+h3,
+.h3 {
+  position: relative;
+  font-weight: 400;
+  font-size: 2.7rem;
+}
+p, li, a, .p1 {
+  position: relative;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.grid-12 {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 0.5rem;
+}
+.grid-6 {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0 0.5rem;
+}
+
+div {
+  height: fit-content;
+}
+
+.container {
+  padding: 0 2rem;
+}
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  height: 100vh;
+  background: url("../images/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-rows: auto 1fr auto;
+}
+.header .header-nav {
+  grid-column: 1/-1;
+  padding: 2rem 0 0 0;
+  align-self: start;
+}
+.header .header-nav__list {
+  display: flex;
+  justify-content: end;
+}
+.header .header-nav__list-item {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0 2rem 0 0;
+}
+.header .header-nav__list-item:last-child {
+  margin: 0;
+}
+.header .header-logo {
+  grid-column: 1/-1;
+  align-self: stretch;
+}
+.header .header-logo__pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.header .header-logo__pic img {
+  height: 12.5rem;
+}
+.header .header-logo__est {
+  padding-top: 0.5rem;
+}
+.header .header-socials {
+  grid-column: 1/-1;
+  padding: 0 0 2rem 0;
+  align-self: start;
+}
+.header .header-socials__list {
+  display: flex;
+  justify-content: start;
+}
+.header .header-socials__list-item {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0 0.5rem 0 0;
+}
+.header .header-socials__list-item:last-child {
+  margin: 0;
+}
+.header .header-socials__list-item img {
+  height: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

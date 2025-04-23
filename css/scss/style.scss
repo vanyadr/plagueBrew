@@ -1,0 +1,238 @@
+$c-bg: #000;
+$c-white: #fff;
+$c-yellow: #EBD800;
+$c-rose: #A1004B;
+
+@mixin centerItem () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin pc {
+    @media (min-width: 1441px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin mobileAlbum {
+    @media (orientation: landscape) and (max-height: 576px) {
+        @content;
+    }
+}
+
+html {
+    font-size: 1.3889vw;
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+    @include pc {
+        font-size: 1.04vw;
+    }
+
+    @include tablet {
+        font-size: 1.9531vw;
+    }
+
+    @include mobile {
+        font-size: 3.4722vw;
+    }
+}
+
+body {
+    background-color: $c-bg;
+    color: $c-white;
+    font-family: Montserrat, Serif;
+    scrollbar-gutter: stable;
+}
+
+body.popup-open {
+    position: fixed;
+}
+
+body.popup-open header {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1,
+.h1 {
+    position: relative;
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    @include pc {
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+}
+
+h2,
+.h2 {
+    position: relative;
+    font-family: "Murs Gothic";
+    letter-spacing: 0.01em;
+    font-size: 6rem;
+    text-transform: uppercase;
+
+    @include pc {
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+}
+
+h3,
+.h3 {
+    position: relative;
+    font-weight: 400;
+    font-size: 2.7rem;
+
+    @include pc {
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+}
+
+p, li, a, .p1 {
+    position: relative;
+    font-weight: 400;
+    font-size: 1.2rem;
+
+    @include pc {
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+}
+
+.grid-12 {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0 0.5rem;
+
+    @include pc {
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+}
+
+.grid-6 {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0 .5rem;
+}
+
+div {
+    height: fit-content;
+}
+
+.container {
+    padding: 0 2rem;
+
+    @include pc {
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header {
+    height: 100vh;
+    background: url('../images/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-rows: auto 1fr auto;
+
+    .header-nav {
+        grid-column: 1 / -1;
+        padding: 2rem 0 0 0;
+        align-self: start;
+        
+        &__list {
+            display: flex;
+            justify-content: end;
+        }
+        &__list-item {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 0 2rem 0 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    .header-logo {
+        grid-column: 1 / -1;
+        align-self: stretch;
+        
+        &__pic {
+            @include centerItem();
+            flex-direction: column;
+            height: 100%;
+
+            img {
+                height: 12.5rem;
+            }
+        }
+        &__est {
+            padding-top: 0.5rem;
+        }
+    }
+    .header-socials {
+        grid-column: 1 / -1;
+        padding: 0 0 2rem 0;
+        align-self: start;
+        
+        &__list {
+            display: flex;
+            justify-content: start;
+        }
+        &__list-item {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 0 0.5rem 0 0;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            img {
+                height: 2rem;
+            }
+        }
+    }
+}

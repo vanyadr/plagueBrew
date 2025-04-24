@@ -176,6 +176,14 @@ div {
     border-radius: 10px;
     font-size: 1rem;
 }
+.border-btn {
+    background: none;
+    color: $c-white;
+    border: 1px solid $c-white;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 
 .header {
     height: 100vh;
@@ -318,7 +326,6 @@ div {
                     width: 17rem;
                     justify-self: end;
                     border-radius: 10px;
-                    padding-right: 1rem;
                 }
                 p {
                     align-self: center;
@@ -345,8 +352,105 @@ div {
         .about__btn {
         }
     }
-    .liders {
-        height: 800px;
-        padding-top: 20rem;
+    .leaders {
+        margin-top: -19rem;
+        position: relative;
+        padding-bottom: 10rem;
+
+        &__body {
+          position: relative;
+          width: 100%;
+          z-index: 3;
+        }
+        &__header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 3.5rem;
+  
+          h3 {
+              margin-right: 1.2rem;
+          }
+        }
+        &__btn-holder, &__header-holder {
+          display: flex;
+        }
+        &__btn-holder {
+          gap: 1.6rem;
+        }
+        .slider {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          &__list {
+            display: flex;
+            overflow: hidden;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+            gap: 2rem;
+          }
+          &__list::-webkit-scrollbar {
+            display: none;
+          }
+          &__item {
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease-in-out;
+            min-width: 13.9rem;
+          }
+          &__button {
+            width: 3.5rem;
+            height: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $c-rose;
+            border-radius: 10px;
+            border: 1px solid #E2E1E5;
+            cursor: pointer;
+          }
+          &__button.is-hidden {
+            background: none;
+          }
+
+          .card {
+            min-height: 25.3rem;
+            display: flex;
+            flex-direction: column;
+            .card__body {
+                margin-top: 1rem;
+            }
+            .card__title {
+                p {
+                    font-size: 0.8rem;
+                }
+                p:first-child {
+                    margin-bottom: 1rem;
+                }
+            }
+            .card__footer {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            .card__price-holder {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+
+                .card__price {
+                    font-weight: 600;
+                }
+                .card__ml {
+                    font-size: 0.8rem;
+                    opacity: 0.5;
+                }
+            }
+            .card__btn {
+                width: 100%;
+            }
+          }
+        }
     }
 }

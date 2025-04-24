@@ -97,6 +97,15 @@ div {
   font-size: 1rem;
 }
 
+.border-btn {
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
 .header {
   height: 100vh;
   background: url("../images/hero-bg.png");
@@ -225,7 +234,6 @@ div {
   width: 17rem;
   justify-self: end;
   border-radius: 10px;
-  padding-right: 1rem;
 }
 .main .about__page-block--4 p {
   align-self: center;
@@ -247,9 +255,100 @@ div {
 .main .about .about__text--yellow {
   color: #EBD800;
 }
-.main .liders {
-  height: 800px;
-  padding-top: 20rem;
+.main .leaders {
+  margin-top: -19rem;
+  position: relative;
+  padding-bottom: 10rem;
+}
+.main .leaders__body {
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+.main .leaders__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+}
+.main .leaders__header h3 {
+  margin-right: 1.2rem;
+}
+.main .leaders__btn-holder, .main .leaders__header-holder {
+  display: flex;
+}
+.main .leaders__btn-holder {
+  gap: 1.6rem;
+}
+.main .leaders .slider {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.main .leaders .slider__list {
+  display: flex;
+  overflow: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  gap: 2rem;
+}
+.main .leaders .slider__list::-webkit-scrollbar {
+  display: none;
+}
+.main .leaders .slider__item {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  min-width: 13.9rem;
+}
+.main .leaders .slider__button {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #A1004B;
+  border-radius: 10px;
+  border: 1px solid #E2E1E5;
+  cursor: pointer;
+}
+.main .leaders .slider__button.is-hidden {
+  background: none;
+}
+.main .leaders .slider .card {
+  min-height: 25.3rem;
+  display: flex;
+  flex-direction: column;
+}
+.main .leaders .slider .card .card__body {
+  margin-top: 1rem;
+}
+.main .leaders .slider .card .card__title p {
+  font-size: 0.8rem;
+}
+.main .leaders .slider .card .card__title p:first-child {
+  margin-bottom: 1rem;
+}
+.main .leaders .slider .card .card__footer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.main .leaders .slider .card .card__price-holder {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.main .leaders .slider .card .card__price-holder .card__price {
+  font-weight: 600;
+}
+.main .leaders .slider .card .card__price-holder .card__ml {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+.main .leaders .slider .card .card__btn {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

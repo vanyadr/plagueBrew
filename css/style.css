@@ -147,24 +147,25 @@ div {
 .header .header-logo__est {
   padding-top: 0.5rem;
 }
-.header .header-socials {
+
+.socials {
   grid-column: 1/-1;
   padding: 0 0 2rem 0;
   align-self: start;
 }
-.header .header-socials__list {
+.socials__list {
   display: flex;
   justify-content: start;
 }
-.header .header-socials__list-item {
+.socials__list-item {
   font-size: 0.9rem;
   font-weight: 400;
   margin: 0 0.5rem 0 0;
 }
-.header .header-socials__list-item:last-child {
+.socials__list-item:last-child {
   margin: 0;
 }
-.header .header-socials__list-item img {
+.socials__list-item img {
   height: 2rem;
 }
 

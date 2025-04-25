@@ -4,11 +4,10 @@ export const horizontalScrollAbout = function () {
     const aboutHeight = document.querySelector('.about-wrapper').offsetHeight;
     const myScrollWidth = document.querySelector('.about__holder').scrollWidth;
     const viewportWidth = window.innerWidth
-    const myPadding = 80;
     
-    if (myScrollY > aboutOffset && myScrollY < aboutOffset + myScrollWidth) {
+    if (myScrollY > aboutOffset && myScrollY < aboutOffset + myScrollWidth + 5) {
       const progress = (myScrollY - aboutOffset) / myScrollWidth;
-      const maxScroll = myScrollWidth - viewportWidth;
+      const maxScroll = myScrollWidth + 5 - viewportWidth;
       document.querySelector('.about__holder').style.transform = `translateX(-${progress * maxScroll}px)`;
     }
     if (myScrollY <= aboutOffset) {

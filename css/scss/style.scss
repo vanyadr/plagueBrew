@@ -176,6 +176,14 @@ div {
     border-radius: 10px;
     font-size: 1rem;
 }
+.white-btn {
+    background: $c-white;
+    color: $c-bg;
+    padding: 0.9rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
 .border-btn {
     background: none;
     color: $c-white;
@@ -253,6 +261,8 @@ div {
     }
 }
 .main {
+    border-bottom: 2px solid $c-white;
+
     .about-bg {
         height: 300vw;
     }
@@ -451,6 +461,158 @@ div {
                 width: 100%;
             }
           }
+        }
+    }
+    .form {
+        background: url('../images/bg.png') no-repeat center 40% / 200%;
+        padding-bottom: 32rem;
+
+        &__header {
+            grid-column: 1 / -1;
+            margin-bottom: 3.5rem;
+        }
+        &__holder {
+            grid-column: 1 / 8;
+            padding-right: 3rem;
+
+            .form__desc {
+                margin-bottom: 3rem;
+
+            }
+            .form__form {
+                display: flex;
+                flex-direction: column;
+
+                .form__inp {
+                    height: 3.5rem;
+                    background: none;
+                    border: 2px solid $c-white;
+                    border-radius: 10px;
+                    margin-bottom: 2rem;
+                    padding: 1rem;
+                    font-size: 1.2rem;
+                    color: $c-white;
+                }
+                textarea.form__inp  {
+                    min-height: 7.5rem;
+                }
+                .form__submit {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .form__check-holder {
+                        display: flex;
+                        align-items: center;
+                        gap: 1.25rem;
+                    }
+                    input[type="checkbox"] {
+                        appearance: none;
+                        position: relative;
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        background: none;
+                        border: 1px solid $c-white;
+                    }
+                    input[type="checkbox"]::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0px;
+                        height: 0px;
+                        font-size: 26px;
+                        overflow: hidden;
+                        background: url('../images/tick.svg') no-repeat center center / 80%;
+                    }
+                    input[type="checkbox"]:checked::after {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                    }
+                    .form__check-text {
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                        color: rgba($color: #fff, $alpha: .5);
+                    }
+                    .form__btn {
+                        width: 15.5rem;
+                    }
+                }
+            }
+        }
+        &__contacts {
+            grid-column: 8 / -1;
+            padding-left: 5rem;
+            align-self: center;
+
+            .form__mail {
+                font-size: 1.8rem;
+                font-weight: 500;
+                text-decoration: underline;
+            }
+            .form__address {
+                margin: 2rem 0;
+            }
+        }
+    }
+    .projects {
+        margin-top: -19rem;
+        row-gap: 0.5rem;
+        align-items: center;
+        padding-bottom: 10rem;
+
+        .projects__card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+            border: 2px solid $c-white;
+            border-radius: 10px;
+            height: 12.5rem;
+            justify-content: space-between;
+            
+            .projects__img-holder {
+                height: 8.5rem;
+                @include centerItem();
+
+                img {
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            p {
+                font-size: 1.1rem;
+                text-align: center;
+            }
+        }
+        .projects__card#pc1 {
+            grid-column: 1 / 4;
+        }
+        .projects__card#pc2 {
+            grid-column: 4 / 7;
+
+            .projects__img-holder {
+                height: 7rem;
+            }
+        }
+        .projects__card#pc3 {
+            grid-column: 7 / 10;
+        }
+        .projects__card#pc4 {
+            grid-column: 1 / 4;
+        }
+        .projects__card#pc5 {
+            grid-column: 1 / 4;
+        }
+        .projects__card#pc6 {
+            grid-column: 7 / 10;
+        }
+        .projects__card#pc7 {
+            grid-column: 10 / -1;
+        }
+        .projects__header {
+            grid-column: 4 / 10;
+            text-align: center;
         }
     }
 }

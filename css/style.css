@@ -97,6 +97,15 @@ div {
   font-size: 1rem;
 }
 
+.white-btn {
+  background: #fff;
+  color: #000;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 .border-btn {
   background: none;
   color: #fff;
@@ -169,6 +178,9 @@ div {
   height: 2rem;
 }
 
+.main {
+  border-bottom: 2px solid #fff;
+}
 .main .about-bg {
   height: 300vw;
 }
@@ -350,6 +362,150 @@ div {
 }
 .main .leaders .slider .card .card__btn {
   width: 100%;
+}
+.main .form {
+  background: url("../images/bg.png") no-repeat center 40%/200%;
+  padding-bottom: 32rem;
+}
+.main .form__header {
+  grid-column: 1/-1;
+  margin-bottom: 3.5rem;
+}
+.main .form__holder {
+  grid-column: 1/8;
+  padding-right: 3rem;
+}
+.main .form__holder .form__desc {
+  margin-bottom: 3rem;
+}
+.main .form__holder .form__form {
+  display: flex;
+  flex-direction: column;
+}
+.main .form__holder .form__form .form__inp {
+  height: 3.5rem;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.main .form__holder .form__form textarea.form__inp {
+  min-height: 7.5rem;
+}
+.main .form__holder .form__form .form__submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .form__holder .form__form .form__submit .form__check-holder {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.main .form__holder .form__form .form__submit input[type=checkbox] {
+  appearance: none;
+  position: relative;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: none;
+  border: 1px solid #fff;
+}
+.main .form__holder .form__form .form__submit input[type=checkbox]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  font-size: 26px;
+  overflow: hidden;
+  background: url("../images/tick.svg") no-repeat center center/80%;
+}
+.main .form__holder .form__form .form__submit input[type=checkbox]:checked::after {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.main .form__holder .form__form .form__submit .form__check-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+.main .form__holder .form__form .form__submit .form__btn {
+  width: 15.5rem;
+}
+.main .form__contacts {
+  grid-column: 8/-1;
+  padding-left: 5rem;
+  align-self: center;
+}
+.main .form__contacts .form__mail {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.main .form__contacts .form__address {
+  margin: 2rem 0;
+}
+.main .projects {
+  margin-top: -19rem;
+  row-gap: 0.5rem;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+.main .projects .projects__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  height: 12.5rem;
+  justify-content: space-between;
+}
+.main .projects .projects__card .projects__img-holder {
+  height: 8.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .projects .projects__card .projects__img-holder img {
+  height: 100%;
+  object-fit: contain;
+}
+.main .projects .projects__card p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.main .projects .projects__card#pc1 {
+  grid-column: 1/4;
+}
+.main .projects .projects__card#pc2 {
+  grid-column: 4/7;
+}
+.main .projects .projects__card#pc2 .projects__img-holder {
+  height: 7rem;
+}
+.main .projects .projects__card#pc3 {
+  grid-column: 7/10;
+}
+.main .projects .projects__card#pc4 {
+  grid-column: 1/4;
+}
+.main .projects .projects__card#pc5 {
+  grid-column: 1/4;
+}
+.main .projects .projects__card#pc6 {
+  grid-column: 7/10;
+}
+.main .projects .projects__card#pc7 {
+  grid-column: 10/-1;
+}
+.main .projects .projects__header {
+  grid-column: 4/10;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

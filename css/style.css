@@ -95,6 +95,12 @@ div {
   padding: 0.9rem 0;
   border-radius: 10px;
   font-size: 1rem;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
 }
 
 .white-btn {
@@ -104,6 +110,12 @@ div {
   border-radius: 10px;
   font-size: 1.2rem;
   font-weight: 500;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.white-btn:hover {
+  background: #A1004B;
+  color: #fff;
 }
 
 .border-btn {
@@ -113,6 +125,12 @@ div {
   padding: 0.5rem 0;
   border-radius: 5px;
   font-size: 1rem;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.border-btn:hover {
+  background: #A1004B;
+  color: #fff;
 }
 
 .form__mail {
@@ -142,12 +160,20 @@ div {
   justify-content: end;
 }
 .header .header-nav__list-item {
+  cursor: pointer;
+  margin: 0 2rem 0 0;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.header .header-nav__list-item a {
   font-size: 0.9rem;
   font-weight: 400;
-  margin: 0 2rem 0 0;
 }
 .header .header-nav__list-item:last-child {
   margin: 0;
+}
+.header .header-nav__list-item:hover {
+  opacity: 0.6;
 }
 .header .header-logo {
   grid-column: 1/-1;
@@ -177,9 +203,8 @@ div {
   justify-content: start;
 }
 .socials__list-item {
-  font-size: 0.9rem;
-  font-weight: 400;
   margin: 0 0.5rem 0 0;
+  cursor: pointer;
 }
 .socials__list-item:last-child {
   margin: 0;
@@ -262,8 +287,8 @@ div {
   align-self: center;
   padding-right: 11rem;
 }
-.main .about__page-block--4 button {
-  margin-right: 18rem;
+.main .about__page-block--4 a > button {
+  width: 23rem;
 }
 .main .about__page-block--5 {
   grid-column: 8/-1;
@@ -466,6 +491,8 @@ div {
   border-radius: 10px;
   height: 12.5rem;
   justify-content: space-between;
+  background: none;
+  transition: background-color 0.5s;
 }
 .main .projects .projects__card .projects__img-holder {
   height: 8.5rem;
@@ -480,6 +507,9 @@ div {
 .main .projects .projects__card p {
   font-size: 1.1rem;
   text-align: center;
+}
+.main .projects .projects__card:hover {
+  background: #A1004B;
 }
 .main .projects .projects__card#pc1 {
   grid-column: 1/4;
@@ -530,13 +560,17 @@ div {
 .footer__menu-col {
   grid-column: 4/7;
 }
-.footer__menu-col .footer__menu-list > li {
+.footer__menu-col .footer__menu-list > a > li {
   font-size: 0.9rem;
   margin-bottom: 1rem;
   opacity: 0.6;
+  transition: opacity 0.5s;
 }
-.footer__menu-col .footer__menu-list > li:last-child {
+.footer__menu-col .footer__menu-list > a:last-child li {
   margin-bottom: 0;
+}
+.footer__menu-col .footer__menu-list > a > li:hover {
+  opacity: 1;
 }
 .footer__contacts-col {
   grid-column: 8/-1;

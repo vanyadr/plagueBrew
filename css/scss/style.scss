@@ -101,7 +101,7 @@ h2,
         font-size: 4.1rem;
     }
     @include mobile {
-        font-size: 1.8rem;
+        font-size: 2.1rem;
     }
 }
 
@@ -185,6 +185,8 @@ div {
         font-size: 0.8rem;
     }
     @include mobile {
+        font-size: 1rem;
+        padding: 1.2rem;
     }
 }
 .btn:hover {
@@ -206,6 +208,8 @@ div {
         font-size: 0.8rem;
     }
     @include mobile {
+        font-size: 1rem;
+        padding: 1.2rem;
     }
 }
 .white-btn:hover {
@@ -226,6 +230,7 @@ div {
     @include tablet {
     }
     @include mobile {
+        padding: 1.2rem;
     }
 }
 .border-btn:hover {
@@ -262,6 +267,15 @@ div {
     background-repeat: no-repeat;
     background-size: cover;
     grid-template-rows: auto 1fr auto;
+    background-position: center;
+    
+    @include pc {
+    }
+    @include tablet {
+    }
+    @include mobile {
+        height: 50vh;
+    }
 
     .header-nav {
         grid-column: 1 / -1;
@@ -274,11 +288,38 @@ div {
         @include tablet {
         }
         @include mobile {
+            display: flex;
+            justify-content: end;
+        }
+
+        .header-nav__menu--mobile {
+            display: none;
+            height: 2.5rem;
+
+            img {
+                height: 100%;
+            };
+
+            @include pc {
+            }
+            @include tablet {
+            }
+            @include mobile {
+                display: block;
+            }
         }
         
         &__list {
             display: flex;
             justify-content: end;
+
+            @include pc {
+            }
+            @include tablet {
+            }
+            @include mobile {
+                display: none;
+            }
         }
         &__list-item {
             cursor: pointer;
@@ -323,6 +364,53 @@ div {
         &__est {
             padding-top: 0.5rem;
         }
+    }
+    .header__mobile-menu {
+        visibility: hidden;
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        top: 0;
+        background: $c-bg;
+        padding: 1rem;
+        width: 60%;
+        transition: visibility 0.5s, opacity 0.5s;
+        opacity: 0;
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+
+            .header__mobile-menu-closer {
+                height: 1.5rem;
+                display: flex;
+                justify-content: end;
+                margin-bottom: 2rem;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .header-nav__list-item--mobile {
+                margin-bottom: 2rem;
+                
+                a {
+                    font-size: 1rem;
+                }
+            }
+            .header-nav__list-item--mobile:last-child {
+                margin-bottom: 8rem;
+            }
+
+            .socials {
+                padding-bottom: 0;
+            }
+        }
+    }
+    .header__mobile-menu.active {
+        visibility: visible;
+        opacity: 1;
     }
 }
 .socials {
@@ -389,6 +477,7 @@ div {
             height: auto;
         }
         @include mobile {
+            background: url('../images/bg.png') repeat-y center 50% / 300%;
             height: auto;
         }
 
@@ -407,7 +496,7 @@ div {
             @include mobile {
                 flex-direction: column;
                 height: auto;
-                gap: 8rem;
+                gap: 5rem;
             }
         }
         &__page {
@@ -421,6 +510,8 @@ div {
             }
             @include mobile {
                 flex: 0 0 auto;
+                flex-direction: column;
+                gap: 2rem;
             }
 
             &--2 {
@@ -466,6 +557,7 @@ div {
                     gap: 1.5rem;
                 }
                 @include mobile {
+                    grid-column: 1 / -1;
                 }
 
                 img {
@@ -480,8 +572,8 @@ div {
                         height: 95%;
                     }
                     @include mobile {
-                        width: auto;
-                        height: 95%;
+                        width: 100%;
+                        height: auto;
                     }
                 }
                 h1 {
@@ -507,6 +599,9 @@ div {
                 @include tablet {
                 }
                 @include mobile {
+                    grid-column: 1 / -1;
+                    padding-right: 0;
+                    gap: 1rem;
                 }
 
                 img {
@@ -537,6 +632,8 @@ div {
                     gap: 1.5rem;
                 }
                 @include mobile {
+                    display: flex;
+                    flex-direction: column-reverse;
                 }
 
                 img {
@@ -552,6 +649,7 @@ div {
                         width: 100%;
                     }
                     @include mobile {
+                        width: 100%;
                     }
                 }
 
@@ -565,6 +663,7 @@ div {
                     @include tablet {
                     }
                     @include mobile {
+                        padding-right: 0;
                     }
                 }
             }
@@ -581,6 +680,7 @@ div {
                     gap: 1.5rem;
                 }
                 @include mobile {
+                    grid-column: 1 / -1;
                     gap: 1.5rem;
                 }
 
@@ -611,7 +711,7 @@ div {
                         padding-right: 4rem;
                     }
                     @include mobile {
-                        padding-right: 4rem;
+                        padding-right: 0;
                     }
                 }
                 a>button {
@@ -632,6 +732,30 @@ div {
                 height: 100%;
                 background: url('../images/idustry-1.png') no-repeat center / cover;
                 border-radius: 10px;
+                
+                @include pc {
+                }
+                @include tablet {
+                }
+                @include mobile {
+                    display: none;
+                }
+            }
+            &-block--5--mobile {
+                display: none;
+                grid-template-rows: auto;
+                background: url('../images/idustry-1.png') no-repeat center / cover;
+                border-radius: 10px;
+                grid-column: 1 / -1;
+                height: 30rem;
+                
+                @include pc {
+                }
+                @include tablet {
+                }
+                @include mobile {
+                    display: block;
+                }
             }
         }
         .about__text--bold {
@@ -813,7 +937,7 @@ div {
             }
             @include mobile {
                 margin-bottom: 2.5rem;
-                text-align: center;
+                text-align: left;
             }
         }
         &__contacts--mobile {
@@ -904,6 +1028,16 @@ div {
                     justify-content: space-between;
                     align-items: center;
 
+                    @include pc {
+                    }
+                    @include tablet {
+                    }
+                    @include mobile {
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 1rem;
+                    }
+
                     .form__check-holder {
                         display: flex;
                         align-items: center;
@@ -949,6 +1083,10 @@ div {
                     }
                     .form__btn {
                         width: 15.5rem;
+
+                        @include mobile {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -1153,7 +1291,7 @@ div {
             grid-column:  1 / 4;
         }
         @include mobile {
-            grid-column:  1 / 4;
+            grid-column:  1 / 5;
         }
 
         .footer__img-holder>img {

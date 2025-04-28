@@ -1,4 +1,5 @@
 export const horizontalScrollAbout = function () {
+  if (window.innerWidth > 1024) {
     const myScrollY = window.scrollY;
     const aboutOffset = document.querySelector('.about-wrapper').offsetTop;
     const aboutHeight = document.querySelector('.about-wrapper').offsetHeight;
@@ -13,4 +14,5 @@ export const horizontalScrollAbout = function () {
     if (myScrollY <= aboutOffset) {
         document.querySelector('.about__holder').style.transform = `translateX(0)`;
     }
+  }
 }

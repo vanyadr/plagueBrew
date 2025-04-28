@@ -73,14 +73,17 @@ body.popup-open header {
 h1,
 .h1 {
     position: relative;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.2rem;
+    line-height: 1.2;
 
     @include pc {
     }
     @include tablet {
+        font-size: 0.8rem;
     }
     @include mobile {
+        font-size: 0.8rem;
     }
 }
 
@@ -91,12 +94,14 @@ h2,
     letter-spacing: 0.01em;
     font-size: 6rem;
     text-transform: uppercase;
-
+    
     @include pc {
     }
     @include tablet {
+        font-size: 4.1rem;
     }
     @include mobile {
+        font-size: 1.8rem;
     }
 }
 
@@ -105,12 +110,14 @@ h3,
     position: relative;
     font-weight: 400;
     font-size: 2.7rem;
-
+    
     @include pc {
     }
     @include tablet {
+        font-size: 1.8rem;
     }
     @include mobile {
+        font-size: 1.4rem;
     }
 }
 
@@ -119,10 +126,11 @@ p, li, a, .p1 {
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 1.2;
-
+    
     @include pc {
     }
     @include tablet {
+        font-size: 0.8rem;
     }
     @include mobile {
     }
@@ -142,21 +150,15 @@ p, li, a, .p1 {
     }
 }
 
-.grid-6 {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 0 .5rem;
-}
-
 div {
     height: fit-content;
 }
 
 .container {
     padding: 0 2rem;
-
+    
     @include pc {
+        padding: 0 8rem;
     }
     @include tablet {
     }
@@ -176,6 +178,14 @@ div {
     border-radius: 10px;
     font-size: 1rem;
     transition: color 0.5s, background-color 0.5s;
+    
+    @include pc {
+    }
+    @include tablet {
+        font-size: 0.8rem;
+    }
+    @include mobile {
+    }
 }
 .btn:hover {
     background: $c-white;
@@ -189,6 +199,14 @@ div {
     font-size: 1.2rem;
     font-weight: 500;
     transition: color 0.5s, background-color 0.5s;
+    
+    @include pc {
+    }
+    @include tablet {
+        font-size: 0.8rem;
+    }
+    @include mobile {
+    }
 }
 .white-btn:hover {
     background: $c-rose;
@@ -202,6 +220,13 @@ div {
     border-radius: 5px;
     font-size: 1rem;
     transition: color 0.5s, background-color 0.5s;
+
+    @include pc {
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
 }
 .border-btn:hover {
     background: $c-rose;
@@ -211,9 +236,24 @@ div {
     font-size: 1.8rem;
     font-weight: 500;
     text-decoration: underline;
+    
+    @include pc {
+    }
+    @include tablet {
+        font-size: 1.2rem;
+    }
+    @include mobile {
+    }
 }
 .form__address {
     margin: 2rem 0;
+
+    @include pc {
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
 }
 
 .header {
@@ -227,6 +267,14 @@ div {
         grid-column: 1 / -1;
         padding: 2rem 0 0 0;
         align-self: start;
+        
+        @include pc {
+            padding: 4rem 0 0 0;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
         
         &__list {
             display: flex;
@@ -262,6 +310,14 @@ div {
 
             img {
                 height: 12.5rem;
+                
+                @include pc {
+                }
+                @include tablet {
+                    height: 6.5rem;
+                }
+                @include mobile {
+                }
             }
         }
         &__est {
@@ -273,6 +329,14 @@ div {
     grid-column: 1 / -1;
     padding: 0 0 2rem 0;
     align-self: start;
+    
+    @include pc {
+        padding: 0 0 4rem 0;
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
     
     &__list {
         display: flex;
@@ -295,7 +359,17 @@ div {
     border-bottom: 2px solid $c-white;
 
     .about-bg {
-        height: 300vw;
+        height: 285vw;
+        
+        @include pc {
+            height: 270vw;
+        }
+        @include tablet {
+            display: none;
+        }
+        @include mobile {
+            display: none;
+        }
     }
     .about {
         box-sizing: content-box;
@@ -306,19 +380,62 @@ div {
         top: 0;
         background: url('../images/bg.png') no-repeat center 50% / 200%;
         overflow-x: hidden;
+        
+        @include pc {
+            padding-bottom: 40rem;
+        }
+        @include tablet {
+            padding-bottom: 28rem;
+            height: auto;
+        }
+        @include mobile {
+            height: auto;
+        }
 
         &__holder {
             display: flex;
             will-change: transform;
             height: 100%;
+
+            @include pc {
+            }
+            @include tablet {
+                flex-direction: column;
+                height: auto;
+                gap: 8rem;
+            }
+            @include mobile {
+                flex-direction: column;
+                height: auto;
+                gap: 8rem;
+            }
         }
         &__page {
             flex: 0 0 100vw;
             height: 100%;
-            &--1 {
+            
+            @include pc {
             }
+            @include tablet {
+                flex: 0 0 auto;
+            }
+            @include mobile {
+                flex: 0 0 auto;
+            }
+
             &--2 {
                 flex: 0 0 80vw;
+                
+                @include pc {
+                    flex: 0 0 65vw;
+                    padding: 0;
+                }
+                @include tablet {
+                    flex: 0 0 auto;
+                }
+                @include mobile {
+                    flex: 0 0 auto;
+                }
             }
             &--3 {
             }
@@ -326,54 +443,187 @@ div {
                 display: grid;
                 grid-template-rows: auto 1fr;
                 height: 100%;
+                
+                @include pc {
+                }
+                @include tablet {
+                    height: auto;
+                }
+                @include mobile {
+                    height: auto;
+                }
             }
             &-block--1 {
                 grid-column: 1 / 5;
+                grid-template-rows: 1fr auto;
+                
+                @include pc {
+                    grid-column: 1 / 6;
+                    grid-template-rows: 1fr auto;
+                }
+                @include tablet {
+                    grid-column: 1 / 6;
+                    gap: 1.5rem;
+                }
+                @include mobile {
+                }
 
                 img {
-                    width: 19rem;
+                    height: 95%;
                     border-radius: 10px;
+                    
+                    @include pc {
+                        height: 95%;
+                    }
+                    @include tablet {
+                        width: auto;
+                        height: 95%;
+                    }
+                    @include mobile {
+                        width: auto;
+                        height: 95%;
+                    }
                 }
-                p {
+                h1 {
                     align-self: end;
+
+                    @include pc {
+                        padding-right: 7rem;
+                    }
+                    @include tablet {
+                    }
+                    @include mobile {
+                    }
                 }
             }
             &-block--2 {
                 grid-column: 7 / -1;
                 padding-right: 2rem;
+                
+                @include pc {
+                    grid-column: 6 / -1;
+                    padding-right: 0;
+                }
+                @include tablet {
+                }
+                @include mobile {
+                }
 
                 img {
                     width: 31rem;
                     align-self: end;
+                    max-width: 100%;
+                    object-fit: contain;
+                    
+                    @include pc {
+                        height: 80%;
+                        width: auto;
+                    }
+                    @include tablet {
+                        width: 100%;
+                    }
+                    @include mobile {
+                        width: 100%;
+                    }
                 }
             }
             &-block--3 {
                 grid-column: 1 / -1;
+                
+                @include pc {
+                    grid-template-rows: 1fr auto;
+                }
+                @include tablet {
+                    gap: 1.5rem;
+                }
+                @include mobile {
+                }
 
                 img {
                     width: 53.7rem;
+                    max-width: 100%;
+                    object-fit: contain;
+                    
+                    @include pc {
+                        width: auto;
+                        height: 80%;
+                    }
+                    @include tablet {
+                        width: 100%;
+                    }
+                    @include mobile {
+                    }
                 }
 
                 p {
                     align-self: end;
                     padding-right: 33%;
+                    
+                    @include pc {
+                        padding-right: 20%;
+                    }
+                    @include tablet {
+                    }
+                    @include mobile {
+                    }
                 }
             }
             &-block--4 {
                 grid-column: 1 / 8;
                 grid-template-rows: auto 1fr auto;
+                
+                @include pc {
+                    grid-template-rows: 1.5fr 1fr auto;
+                    grid-column: 1 / 7;
+                }
+                @include tablet {
+                    grid-column: 1 / 7;
+                    gap: 1.5rem;
+                }
+                @include mobile {
+                    gap: 1.5rem;
+                }
 
                 img {
                     width: 17rem;
                     justify-self: end;
                     border-radius: 10px;
+                    max-width: 100%;
+                    
+                    @include pc {
+                        width: auto;
+                        height: 100%;
+                    }
+                    @include tablet {
+                        width: 100%;
+                    }
+                    @include mobile {
+                        width: 100%;
+                    }
                 }
                 p {
                     align-self: center;
                     padding-right: 11rem;
+                    
+                    @include pc {
+                    }
+                    @include tablet {
+                        padding-right: 4rem;
+                    }
+                    @include mobile {
+                        padding-right: 4rem;
+                    }
                 }
                 a>button {
                     width: 23rem;
+                    
+                    @include pc {
+                    }
+                    @include tablet {
+                        width: 100%;
+                    }
+                    @include mobile {
+                    }
                 }
             }
             &-block--5 {
@@ -396,8 +646,19 @@ div {
     .leaders {
         margin-top: -19rem;
         position: relative;
-        padding-bottom: 10rem;
+        margin-bottom: 2rem;
+        
+        @include pc {
+            margin-top: -29rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
 
+        .card .card__img-wrapper img {
+            width: 100%;
+        }
         &__body {
           position: relative;
           width: 100%;
@@ -412,12 +673,32 @@ div {
           h3 {
               margin-right: 1.2rem;
           }
+          img {
+            @include pc {
+            }
+            @include tablet {
+                height: 1.5rem;
+            }
+            @include mobile {
+                height: 1.5rem;
+            }
+          }
         }
         &__btn-holder, &__header-holder {
           display: flex;
+          align-items: center;
         }
         &__btn-holder {
           gap: 1.6rem;
+          
+          @include pc {
+        }
+        @include tablet {
+                gap: 1rem;
+            }
+            @include mobile {
+                gap: 1rem;
+            }
         }
         .slider {
           display: flex;
@@ -449,6 +730,17 @@ div {
             border-radius: 10px;
             border: 1px solid #E2E1E5;
             cursor: pointer;
+            
+            @include pc {
+            }
+            @include tablet {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+            @include mobile {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
           }
           &__button.is-hidden {
             background: none;
@@ -497,17 +789,75 @@ div {
     .form {
         background: url('../images/bg.png') no-repeat center 40% / 200%;
         padding-bottom: 32rem;
+        padding-top: 8rem;
+        
+        @include pc {
+            padding-bottom: 40rem;
+            background: url('../images/bg.png') no-repeat center 40% / 180%;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
 
         &__header {
             grid-column: 1 / -1;
             margin-bottom: 3.5rem;
+            
+            @include pc {
+                text-align: center;
+            }
+            @include tablet {
+                margin-bottom: 2.5rem;
+                text-align: center;
+            }
+            @include mobile {
+                margin-bottom: 2.5rem;
+                text-align: center;
+            }
+        }
+        &__contacts--mobile {
+            display: none;
+
+            @include pc {
+            }
+            @include tablet {
+                display: block;
+                grid-column: 1 / -1;
+            }
+            @include mobile {
+                display: block;
+                grid-column: 1 / -1;
+            }
         }
         &__holder {
             grid-column: 1 / 8;
             padding-right: 3rem;
+            
+            @include pc {
+            }
+            @include tablet {
+                grid-column: 1 / -1;
+                padding-right: 0;
+            }
+            @include mobile {
+                grid-column: 1 / -1;
+                padding-right: 0;
+            }
 
             .form__desc {
                 margin-bottom: 3rem;
+                
+                @include pc {
+                }
+                @include tablet {
+                    margin-bottom: 1rem;
+                    font-size: 1.2rem;
+                }
+                @include mobile {
+                    margin-bottom: 1rem;
+                    font-size: 1.2rem;
+                }
 
             }
             .form__form {
@@ -523,9 +873,31 @@ div {
                     padding: 1rem;
                     font-size: 1.2rem;
                     color: $c-white;
+                    
+                    @include pc {
+                    }
+                    @include tablet {
+                        height: 2.8rem;
+                        margin-bottom: 1rem;
+                        font-size: 0.8rem;
+                    }
+                    @include mobile {
+                        height: 2.8rem;
+                        margin-bottom: 1rem;
+                        font-size: 0.8rem;
+                    }
                 }
                 textarea.form__inp  {
                     min-height: 7.5rem;
+                    
+                    @include pc {
+                    }
+                    @include tablet {
+                        min-height: 6rem;
+                    }
+                    @include mobile {
+                        min-height: 6rem;
+                    }
                 }
                 .form__submit {
                     display: flex;
@@ -544,6 +916,7 @@ div {
                         height: 1.25rem;
                         background: none;
                         border: 1px solid $c-white;
+                        border-radius: 5px;
                     }
                     input[type="checkbox"]::after {
                         content: "";
@@ -564,6 +937,15 @@ div {
                         font-size: 0.9rem;
                         font-weight: 400;
                         color: rgba($color: #fff, $alpha: .5);
+                        
+                        @include pc {
+                        }
+                        @include tablet {
+                            font-size: 0.8rem;
+                        }
+                        @include mobile {
+                            font-size: 0.8rem;
+                        }
                     }
                     .form__btn {
                         width: 15.5rem;
@@ -575,13 +957,33 @@ div {
             grid-column: 8 / -1;
             padding-left: 5rem;
             align-self: center;
+
+            @include pc {
+            }
+            @include tablet {
+                display: none;
+            }
+            @include mobile {
+                display: none;
+            }
         }
     }
     .projects {
-        margin-top: -19rem;
+        margin-top: -27rem;
         row-gap: 0.5rem;
         align-items: center;
-        padding-bottom: 10rem;
+        margin-bottom: 10rem;
+        
+        @include pc {
+        }
+        @include tablet {
+            gap: 1rem;
+            margin-bottom: 8rem;
+        }
+        @include mobile {
+            gap: 1rem;
+            margin-bottom: 8rem;
+        }
 
         .projects__card {
             display: flex;
@@ -614,6 +1016,14 @@ div {
         }
         .projects__card#pc1 {
             grid-column: 1 / 4;
+            @include pc {
+            }
+            @include tablet {
+                grid-column: 1 / 7;
+            }
+            @include mobile {
+                grid-column: 1 / 7;
+            }
         }
         .projects__card#pc2 {
             grid-column: 4 / 7;
@@ -621,34 +1031,130 @@ div {
             .projects__img-holder {
                 height: 7rem;
             }
+
+            @include pc {
+            }
+            @include tablet {
+                grid-column: 7 / -1;
+            }
+            @include mobile {
+                grid-column: 7 / -1;
+            }
         }
         .projects__card#pc3 {
             grid-column: 7 / 10;
+
+            @include pc {
+            }
+            @include tablet {
+                grid-column: 1 / 7;
+            }
+            @include mobile {
+                grid-column: 1 / 7;
+            }
         }
         .projects__card#pc4 {
             grid-column: 1 / 4;
+
+            @include pc {
+            }
+            @include tablet {
+                grid-column: 7 / -1;
+            }
+            @include mobile {
+                grid-column: 7 / -1;
+            }
         }
         .projects__card#pc5 {
             grid-column: 1 / 4;
+
+            @include pc {
+            }
+            @include tablet {
+                grid-column: 1 / 7;
+            }
+            @include mobile {
+                grid-column: 1 / 7;
+            }
         }
         .projects__card#pc6 {
             grid-column: 7 / 10;
+
+            @include pc {
+            }
+            @include tablet {
+                grid-column: 7 / -1;
+            }
+            @include mobile {
+                grid-column: 7 / -1;
+            }
         }
         .projects__card#pc7 {
             grid-column: 10 / -1;
+
+            @include pc {
+            }
+            @include tablet {
+                grid-column: 1 / 7;
+            }
+            @include mobile {
+                grid-column: 1 / 7;
+            }
         }
         .projects__header {
             grid-column: 4 / 10;
             text-align: center;
+
+            @include pc {
+            }
+            @include tablet {
+                display: none;
+            }
+            @include mobile {
+                display: none;
+            }
+        }
+        .projects__header--mobile {
+            display: none;
+            grid-column: 1 / -1;
+            text-align: left;
+            margin-bottom: 2.5rem;
+
+            @include pc {
+            }
+            @include tablet {
+                display: inline;
+            }
+            @include mobile {
+                display: inline;
+            }
         }
     }
 }
 .footer {
     padding-top: 3.5rem;
     padding-bottom: 6rem;
+    
+    @include pc {
+    }
+    @include tablet {
+        row-gap: 2rem;
+        padding-bottom: 3rem;
+    }
+    @include mobile {
+    }
 
     &__logo-col {
         grid-column:  1 / 3;
+        
+        @include pc {
+        }
+        @include tablet {
+            grid-column:  1 / 4;
+        }
+        @include mobile {
+            grid-column:  1 / 4;
+        }
 
         .footer__img-holder>img {
             width: 100%;
@@ -663,6 +1169,14 @@ div {
     }
     &__menu-col {
         grid-column: 4 / 7;
+        
+        @include pc {
+        }
+        @include tablet {
+            grid-column: 6 / -1;
+        }
+        @include mobile {
+        }
 
         .footer__menu-list>a>li {
             font-size: 0.9rem;
@@ -681,5 +1195,13 @@ div {
     }
     &__contacts-col {
         grid-column: 8 / -1;
+        
+        @include pc {
+        }
+        @include tablet {
+            grid-column: 1 / 5;
+        }
+        @include mobile {
+        }
     }
 }
